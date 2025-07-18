@@ -223,9 +223,9 @@ Podemos dividir las fases realizadas:
 
 ### Generación Logs
 
-![image](https://github.com/user-attachments/assets/6294fe84-f6e4-4dc3-badf-b624ddd0fd20)
+![Faker](img/FAKER.png)
 
-![image](https://github.com/user-attachments/assets/5a29f9ac-edff-413c-861d-b723cb670ca1)
+![MaxMind](img/MAXMIND.png)
 
 - Generación de Logs: Como estamos en un entorno de pruebas, para realizar un sistema similar al que tendríamos en la vida real, necesitamos obtener los datos de algún sitio, para ello usaremos una librería creada en python llamada **Faker** que permite generar datos sintéticos en general usando sintaxis creada. Estos logs generados tendrán una estructura similar a Apache + datos de geolocalización. Estos datos se enviarán a Kafka para preprocesarlos a través de un topic que escuchará en uno de los broker.
 
