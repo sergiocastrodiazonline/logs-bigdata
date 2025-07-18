@@ -308,7 +308,7 @@ Dentro de la arquitectura general tendremos un:
 
 ## Gráficas con Power BI
 
-![image](https://github.com/user-attachments/assets/f7b82f1e-e1ad-4a86-bbdb-63919c31e9e9)
+![PowerBIDesktop](img/PowerBIDesktop.png)
 
 La última parte consistirá en crear una serie de gráficas basadas en el ETL que nos brindará la información del marketing, publicidad y seguridad que nos van llegando para saber como tenemos que mejorar la arquitectura empresarial.
 
@@ -344,7 +344,7 @@ http://192.168.60.10:8088/cluster/nodes
 
 ### Yarn
 
-![image](https://github.com/user-attachments/assets/2e79cdd2-e626-42f9-84b7-58b42840f650)
+![Yarn](img/Yarn1.png)
 
 Vemos que lo tenemos instalado.
 
