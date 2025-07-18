@@ -233,7 +233,7 @@ Podemos dividir las fases realizadas:
 
 ### Kafka
 
-![image](https://github.com/user-attachments/assets/6b33dced-6c49-4ecf-ab6e-3a0721e1593c)
+![KafkaBanner](img/KafkaBanner.png)
 
 Realizamos un primer preprocesamiento usando la herramienta de Kafka donde usando un controller (permite gestionanr el estado del clúster, en KRaft además gestionar el quorum y los metadatos) y 2 broker (nodos que almacenan y sirven los datos o mensajes de Kafka a los productores y consumidores).
 
@@ -245,7 +245,7 @@ En este proyecto no se utilizará Kafka Connect ya que la fuente es un producer 
 
 ### Spark Streaming
 
-![image](https://github.com/user-attachments/assets/c1efbcc0-8faa-4464-a005-2aa127a4b48c)
+![ApacheSparkBanner](img/ApacheSparkBanner.png)
 
 Una vez preprocesados los datos mediante Kafka y su paso al topic, mediante **Spark Streaming y la API de Dataframe** realizaremos el segundo procesamiento usando un consumer de Spark, en este caso la parte más importante: Fase ETL (Extract, Transform y Load) donde realizamos la extracción en este caso del topic de Kafka, realizar una serie de transformaciones usando la API y finalmente la Carga donde lo enviamos a HDFS para análisis históricos a largo plazo y en mi caso tras una investigación a una base de datos: PostgresSQL ya que esta con la configuración correcta en Power Bi Desktop permite realizar las gráficas y luego añadir la visualización a tiempo real.
 
@@ -267,10 +267,10 @@ También destacar la presencia del componente:
 
 ## Extracción de Métricas con Prometheus y Visualización con Grafana
 
-![image](https://github.com/user-attachments/assets/d7203321-3e77-4bd9-8356-5de51782f0d8)
+![PrometheusBanner](img/PrometheusBanner.png)
 
 
-![image](https://github.com/user-attachments/assets/faadc4cc-de3f-4054-82a7-6e211dae0d64)
+![GrafanaBanner](img/GrafanaBanner.png)
 
 
 Usando el software de Prometheus podemos extraer las métricas de salud de los dos software configurados anteriormente (a métricas de salud nos referimos por ejemplo a monitorizar el número de brokers para Kafka y su uso o bien en Spark el numero de workers activos y cuantos recursos del sistema usan), para ello con una configuración de Prometheus correcta (después la veremos) pues podemos realizar esta obtención.
@@ -283,9 +283,9 @@ Grafana por su parte nos permitirá crear las gráficas de las métricas extraid
 
 ## Load en HDFS y PostgreSQL
 
-![image](https://github.com/user-attachments/assets/85999d92-6a71-428e-9f4b-1d1fd40f5bc1)
+![HadoopLogo](img/HadoopLogo.png)
 
-![image](https://github.com/user-attachments/assets/85dbb5a3-6532-4af2-8184-778d5022d990)
+![PostgreSQL](img/PostgreSQL.png)
 
 En esta parte, guardamos los datos tanto en nuestro sistema HDFS como en una base de datos PostgreSQL usando una serie de métodos:
 
