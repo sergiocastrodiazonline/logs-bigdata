@@ -319,7 +319,7 @@ La última parte consistirá en crear una serie de gráficas basadas en el ETL q
 
 Estas máquinas representan 1 a un nodo master de Hadoop (NameNode) y las otras 3 a nodos worker de Hadoop que serán DataNodes que almacenarán y leerán los bloques de Hadoop y HDFS.
 
-![image](https://github.com/user-attachments/assets/423de709-54fb-4539-8b10-68129ddccc28)
+![Hadoop1](img/Hadoop1.png)
 
 En nuestro caso lo haremos con la versión 3.4.1.
 
@@ -328,11 +328,12 @@ Para acceder de forma sencilla usamos la dirección IP y el puerto de la interfa
 ```
 http://192.168.60.10:9870
 ```
-![image](https://github.com/user-attachments/assets/fd27a258-d8ec-49bb-9013-5b3347f0db17)
+![Hadoop2](img/Hadoop2.png)
+
 
 ### MapReduce
 
-![image](https://github.com/user-attachments/assets/2072b63c-35ee-4c20-9c08-0c43eb3bc058)
+![Hadoop3](img/Hadoop3.png)
 
 No se ha realizado ninguna prueba pero se accede para ver la carga de las aplicaciones a través de
 
@@ -356,13 +357,13 @@ Dentro del mismo master necesitamos ejecutar mínimo un nodo worker de Spark par
 
 Dicho conector lo descargamos de la web de PostgreSQL (link en la Webgrafía). 
 
-![image](https://github.com/user-attachments/assets/65371db9-9c79-402c-a96c-710389773ef7)
+![Spark](img/Spark1.png)
 
 Vemos que está instalado correctamente.
 
 ### Kafka
 
-![image](https://github.com/user-attachments/assets/b2a2babd-aba0-4ca4-a1ff-366c0e3a486a)
+![Kafka](img/Kafka1.png)
 
 En Kafka (dejaremos la 3.9) perdiendo la disponibilidad de los qorum dinámicos de la 4.0 (quitar o poner nodos en caliente), configuraremos en el nodo master 1 controller y 2 broker ya que por problemas de rendimiento no podemos levantar más, además crearemos 1 topic (replica 2 ya que tenemos 2 broker) y 2 particiones para guardar los datos. 
 
@@ -372,7 +373,7 @@ La conexión entre Kafka y Spark se realizará usando un plugin por defecto en e
 
 ### Directorio de nuestro Proyecto
 
-![image](https://github.com/user-attachments/assets/74328d46-c82a-4dda-86af-71f0419d1fb0)
+![DirectorioProyecto](img/DirectorioProyecto.png)
 
 Visualizando el directorio de nuestro proyecto podemos ver los directorios
 
@@ -383,7 +384,7 @@ Visualizando el directorio de nuestro proyecto podemos ver los directorios
 
 ### Grafana y Prometheus
 
-![image](https://github.com/user-attachments/assets/8f68334f-8859-42ed-bbbc-41cc7a1c9e14)
+![GrafanaPrometheus](img/GrafanaPrometheus.png)
 
 Podemos ver una instalación de Prometheus donde usaremos una configuración preparada para el cluster de Kafka que ya poseemos donde podemos hacer métricas pero especialmente usaremos la que podemos ver métricas para brokers, workers y el controller. (fichero ejemplo2_mon_kafka.yml).
 
